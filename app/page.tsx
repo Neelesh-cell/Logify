@@ -2,7 +2,7 @@
 
 import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
-import { Github, Sparkles, Activity, Lock } from "lucide-react";
+import { GitBranch, Sparkles, Activity, Lock } from "lucide-react";
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
             className="bg-white text-slate-950 hover:bg-slate-200 transition-all duration-300 font-semibold px-8 h-14 rounded-xl text-lg flex items-center gap-3 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)]"
             onClick={() => signIn('github')}
           >
-            <Github className="w-6 h-6" />
+            <GitBranch className="w-6 h-6" />
             Sign in with GitHub
           </Button>
         </div>

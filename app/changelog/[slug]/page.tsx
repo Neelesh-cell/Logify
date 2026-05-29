@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase-server";
-import { Sparkles, Bug, Zap, ArrowRight, Github } from "lucide-react";
+import { Sparkles, Bug, Zap, ArrowRight, GitBranch } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 
@@ -38,7 +38,7 @@ export default async function ChangelogPage({ params }: { params: { slug: string
         {/* Header */}
         <header className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-medium text-slate-400 mb-2">
-            <Github className="w-4 h-4" />
+            <GitBranch className="w-4 h-4" />
             <span>{repo_full_name}</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-500 pb-2">
