@@ -52,7 +52,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
         body: JSON.stringify({
           repo_full_name: repoValue,
           start_date: dateRange.from.toISOString(),
-          end_date: new Date(dateRange.to.setHours(23, 59, 59, 999)).toISOString(),
+          end_date: new Date(new Date(dateRange.to).setHours(23, 59, 59, 999)).toISOString(),
         }),
       });
 
@@ -61,7 +61,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
       }
 
       const data = await res.json();
-      if (data.error) throw new Error(data.error);
+      if (data.error) throw new Error(typeof data.error === 'string' ? data.error : JSON.stringify(data.error));
       
       if (data.length === 0) {
         throw new Error("No commits found in the selected date range.");
@@ -86,16 +86,17 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
       }
 
       const aiData = await aiRes.json();
-      if (aiData.error) throw new Error(aiData.error);
+      if (aiData.error) throw new Error(typeof aiData.error === 'string' ? aiData.error : JSON.stringify(aiData.error));
       
       setSuccessSlug(aiData.slug);
 
     } catch (err: any) {
       try {
         const parsed = JSON.parse(err.message);
-        setError(parsed.error || "Failed to generate changelog.");
+        const errVal = parsed.error || "Failed to generate changelog.";
+        setError(typeof errVal === 'string' ? errVal : JSON.stringify(errVal));
       } catch {
-        setError(err.message || "Failed to generate changelog.");
+        setError(typeof err?.message === 'string' ? err.message : "Failed to generate changelog.");
       }
     } finally {
       setLoading(false);
