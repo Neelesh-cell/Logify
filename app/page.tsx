@@ -6,7 +6,7 @@ import { GitBranch, Sparkles, Activity, Lock } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center justify-center relative overflow-x-hidden py-24">
+    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center justify-center relative py-24">
       {/* Background gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/30 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-600/20 blur-[120px] rounded-full pointer-events-none" />
