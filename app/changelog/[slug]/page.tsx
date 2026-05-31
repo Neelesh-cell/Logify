@@ -28,7 +28,7 @@ export default async function ChangelogPage({ params }: { params: { slug: string
   const hasImprovements = categories?.improvements?.items?.length > 0;
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-50 flex flex-col relative overflow-hidden font-sans">
+    <div className="min-h-screen bg-background text-foreground flex flex-col relative overflow-hidden font-sans">
       {/* Background aesthetics */}
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-indigo-600/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-600/10 blur-[150px] rounded-full pointer-events-none" />

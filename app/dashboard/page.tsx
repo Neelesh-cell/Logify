@@ -34,7 +34,7 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-50 p-4 py-8 md:p-8 md:py-12">
+    <div className="min-h-screen bg-background text-foreground p-4 py-8 md:p-8 md:py-12">
       <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
