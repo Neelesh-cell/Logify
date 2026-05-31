@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'EchoDrop | Drop-in feedback',
-  description: 'A lightweight, framework-agnostic feedback widget bundled with esbuild. Drop the script on any page and start collecting insights instantly.',
+  title: 'Logify',
+  description: 'AI Changelog Generator',
 }
 
 export default function RootLayout({
