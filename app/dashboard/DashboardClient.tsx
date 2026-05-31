@@ -123,12 +123,12 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
     return (
       <div className="flex flex-col items-center justify-center py-20 space-y-6 animate-pulse">
         <div className="relative">
-          <div className="absolute inset-0 bg-indigo-500 blur-xl opacity-50 rounded-full"></div>
+          <div className="absolute inset-0 bg-yellow-500 blur-xl opacity-50 rounded-full"></div>
           <div className="relative bg-stone-900 border border-stone-700 p-4 rounded-full">
-            <Sparkles className="w-10 h-10 text-indigo-400" />
+            <Sparkles className="w-10 h-10 text-yellow-400" />
           </div>
         </div>
-        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-emerald-400">
+        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-amber-400">
           AI is parsing your commits...
         </h2>
         <p className="text-stone-400">Synthesizing features, fixes, and improvements.</p>
@@ -139,7 +139,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
   if (successSlug) {
     return (
       <div className="flex flex-col items-center justify-center py-16 space-y-8 animate-fade-in-up">
-        <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center border border-emerald-500/30">
+        <div className="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center border border-amber-500/30">
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <div className="text-center space-y-2">
@@ -154,7 +154,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
           <Button 
             variant="ghost" 
             size="sm" 
-            className="text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10"
+            className="text-yellow-400 hover:text-yellow-300 hover:bg-yellow-500/10"
             onClick={handleCopy}
           >
             {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
@@ -264,13 +264,13 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
       <Button 
         onClick={handleGenerate} 
         disabled={loading}
-        className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)]"
+        className="bg-amber-600 hover:bg-amber-700 text-white font-medium shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)]"
       >
         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
         {loading ? "Fetching Commits..." : "Generate Changelog"}
       </Button>
 
-      {error && <p className="text-rose-500 font-medium text-sm">{error}</p>}
+      {error && <p className="text-red-500 font-medium text-sm">{error}</p>}
     </div>
   );
 }

@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center relative py-12 px-4">
       {/* Background gradients */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/30 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-600/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-yellow-600/30 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-amber-600/20 blur-[120px] rounded-full pointer-events-none" />
 
       <main className="z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl mx-auto space-y-10 md:space-y-16">
         <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/50 border border-stone-800 text-sm font-medium text-emerald-400 mb-4 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/50 border border-stone-800 text-sm font-medium text-amber-400 mb-4 animate-fade-in-up">
             <Sparkles className="w-4 h-4" />
             <span>Introducing Logify</span>
           </div>
@@ -40,24 +40,24 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 border-t border-stone-800/50 w-full text-left">
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
-              <Activity className="w-6 h-6 text-indigo-400" />
+            <div className="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
+              <Activity className="w-6 h-6 text-yellow-400" />
             </div>
             <h3 className="text-xl font-semibold">Automated Tracking</h3>
             <p className="text-stone-400">Connect your repo and let our AI analyze commits, pull requests, and issues automatically.</p>
           </div>
           
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
-              <Sparkles className="w-6 h-6 text-emerald-400" />
+            <div className="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+              <Sparkles className="w-6 h-6 text-amber-400" />
             </div>
             <h3 className="text-xl font-semibold">AI Summarization</h3>
             <p className="text-stone-400">Generates human-readable, engaging release notes categorized by features, fixes, and chores.</p>
           </div>
 
           <div className="space-y-3">
-            <div className="w-12 h-12 rounded-lg bg-rose-500/10 flex items-center justify-center border border-rose-500/20">
-              <Lock className="w-6 h-6 text-rose-400" />
+            <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
+              <Lock className="w-6 h-6 text-orange-400" />
             </div>
             <h3 className="text-xl font-semibold">Secure by Design</h3>
             <p className="text-stone-400">We only request the permissions we need. Your code stays secure and private.</p>

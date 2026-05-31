@@ -30,8 +30,8 @@ export default async function ChangelogPage({ params }: { params: { slug: string
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col relative overflow-hidden font-sans">
       {/* Background aesthetics */}
-      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-indigo-600/10 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-600/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-yellow-600/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-amber-600/10 blur-[150px] rounded-full pointer-events-none" />
 
       <main className="flex-grow z-10 flex flex-col items-center pt-12 pb-16 px-6 max-w-4xl mx-auto w-full space-y-10 md:space-y-16 animate-fade-in-up">
         
@@ -52,8 +52,8 @@ export default async function ChangelogPage({ params }: { params: { slug: string
         {/* Hero Card for Summary */}
         <div className="w-full bg-stone-900/60 border border-stone-800 p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
           <div className="flex items-start gap-4">
-            <div className="mt-1 bg-indigo-500/20 p-2 rounded-lg border border-indigo-500/30">
-              <Sparkles className="w-6 h-6 text-indigo-400" />
+            <div className="mt-1 bg-yellow-500/20 p-2 rounded-lg border border-yellow-500/30">
+              <Sparkles className="w-6 h-6 text-yellow-400" />
             </div>
             <div className="space-y-2">
               <h2 className="text-xl font-semibold text-white">Summary</h2>
@@ -68,16 +68,16 @@ export default async function ChangelogPage({ params }: { params: { slug: string
           {hasFeatures && (
             <section className="space-y-6">
               <div className="flex items-center gap-3 border-b border-stone-800 pb-4">
-                <div className="bg-emerald-500/20 p-2 rounded-lg border border-emerald-500/30">
-                  <Zap className="w-5 h-5 text-emerald-400" />
+                <div className="bg-amber-500/20 p-2 rounded-lg border border-amber-500/30">
+                  <Zap className="w-5 h-5 text-amber-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-emerald-400">New Features</h3>
+                <h3 className="text-2xl font-semibold text-amber-400">New Features</h3>
               </div>
               <p className="text-stone-400 font-medium pl-2">{categories.features.summary}</p>
               <ul className="space-y-4 pl-2">
                 {categories.features.items.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-3 text-stone-300">
-                    <ArrowRight className="w-5 h-5 text-emerald-500/50 shrink-0 mt-0.5" />
+                    <ArrowRight className="w-5 h-5 text-amber-500/50 shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -89,16 +89,16 @@ export default async function ChangelogPage({ params }: { params: { slug: string
           {hasImprovements && (
             <section className="space-y-6">
               <div className="flex items-center gap-3 border-b border-stone-800 pb-4">
-                <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-500/30">
-                  <Sparkles className="w-5 h-5 text-blue-400" />
+                <div className="bg-yellow-500/20 p-2 rounded-lg border border-yellow-500/30">
+                  <Sparkles className="w-5 h-5 text-yellow-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-blue-400">Improvements</h3>
+                <h3 className="text-2xl font-semibold text-yellow-400">Improvements</h3>
               </div>
               <p className="text-stone-400 font-medium pl-2">{categories.improvements.summary}</p>
               <ul className="space-y-4 pl-2">
                 {categories.improvements.items.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-3 text-stone-300">
-                    <ArrowRight className="w-5 h-5 text-blue-500/50 shrink-0 mt-0.5" />
+                    <ArrowRight className="w-5 h-5 text-yellow-500/50 shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -110,16 +110,16 @@ export default async function ChangelogPage({ params }: { params: { slug: string
           {hasFixes && (
             <section className="space-y-6">
               <div className="flex items-center gap-3 border-b border-stone-800 pb-4">
-                <div className="bg-rose-500/20 p-2 rounded-lg border border-rose-500/30">
-                  <Bug className="w-5 h-5 text-rose-400" />
+                <div className="bg-orange-500/20 p-2 rounded-lg border border-orange-500/30">
+                  <Bug className="w-5 h-5 text-orange-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-rose-400">Bug Fixes</h3>
+                <h3 className="text-2xl font-semibold text-orange-400">Bug Fixes</h3>
               </div>
               <p className="text-stone-400 font-medium pl-2">{categories.fixes.summary}</p>
               <ul className="space-y-4 pl-2">
                 {categories.fixes.items.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-3 text-stone-300">
-                    <ArrowRight className="w-5 h-5 text-rose-500/50 shrink-0 mt-0.5" />
+                    <ArrowRight className="w-5 h-5 text-orange-500/50 shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -137,7 +137,7 @@ export default async function ChangelogPage({ params }: { params: { slug: string
             className="group flex items-center gap-2 px-4 py-2 bg-stone-900 border border-stone-800 rounded-full hover:bg-stone-800 hover:border-stone-700 transition-all duration-300"
           >
             <span className="text-sm text-stone-400 group-hover:text-stone-300 transition-colors">Generated with</span>
-            <span className="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Logify</span>
+            <span className="text-sm font-bold text-white group-hover:text-amber-400 transition-colors">Logify</span>
           </Link>
         </div>
       </footer>
