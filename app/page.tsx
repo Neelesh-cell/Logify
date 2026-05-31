@@ -6,19 +6,19 @@ import { GitBranch, Sparkles, Activity, Lock } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center justify-center relative py-24">
+    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center justify-center relative py-12 px-4">
       {/* Background gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/30 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-600/20 blur-[120px] rounded-full pointer-events-none" />
 
-      <main className="z-10 flex flex-col items-center justify-center text-center px-6 max-w-4xl mx-auto space-y-16">
+      <main className="z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl mx-auto space-y-10 md:space-y-16">
         <div className="space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm font-medium text-emerald-400 mb-4 animate-fade-in-up">
             <Sparkles className="w-4 h-4" />
             <span>Introducing Logify</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-500 pb-2">
+          <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-500 pb-2 px-2">
             AI Changelog Generator
           </h1>
           
@@ -27,10 +27,10 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+        <div className="flex flex-col w-full sm:flex-row items-center justify-center gap-4 pt-4 px-4">
           <Button 
             size="lg" 
-            className="bg-white text-slate-950 hover:bg-slate-200 transition-all duration-300 font-semibold px-8 h-14 rounded-xl text-lg flex items-center gap-3 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)]"
+            className="bg-white text-slate-950 hover:bg-slate-200 transition-all duration-300 font-semibold px-8 h-14 rounded-xl text-lg flex items-center justify-center gap-3 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] w-full sm:w-auto"
             onClick={() => signIn('github', { callbackUrl: '/dashboard' })}
           >
             <GitBranch className="w-6 h-6" />

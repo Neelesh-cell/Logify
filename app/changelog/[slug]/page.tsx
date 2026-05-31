@@ -33,7 +33,7 @@ export default async function ChangelogPage({ params }: { params: { slug: string
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-indigo-600/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-600/10 blur-[150px] rounded-full pointer-events-none" />
 
-      <main className="flex-grow z-10 flex flex-col items-center pt-24 pb-32 px-6 max-w-4xl mx-auto w-full space-y-16 animate-fade-in-up">
+      <main className="flex-grow z-10 flex flex-col items-center pt-12 pb-16 px-6 max-w-4xl mx-auto w-full space-y-10 md:space-y-16 animate-fade-in-up">
         
         {/* Header */}
         <header className="text-center space-y-4">
@@ -41,7 +41,7 @@ export default async function ChangelogPage({ params }: { params: { slug: string
             <GitBranch className="w-4 h-4" />
             <span>{repo_full_name}</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-500 pb-2">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-500 pb-2">
             Release Notes
           </h1>
           <p className="text-slate-500 font-medium">
