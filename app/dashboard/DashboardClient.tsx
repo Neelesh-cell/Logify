@@ -124,14 +124,14 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
       <div className="flex flex-col items-center justify-center py-20 space-y-6 animate-pulse">
         <div className="relative">
           <div className="absolute inset-0 bg-indigo-500 blur-xl opacity-50 rounded-full"></div>
-          <div className="relative bg-slate-900 border border-slate-700 p-4 rounded-full">
+          <div className="relative bg-stone-900 border border-stone-700 p-4 rounded-full">
             <Sparkles className="w-10 h-10 text-indigo-400" />
           </div>
         </div>
         <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-emerald-400">
           AI is parsing your commits...
         </h2>
-        <p className="text-slate-400">Synthesizing features, fixes, and improvements.</p>
+        <p className="text-stone-400">Synthesizing features, fixes, and improvements.</p>
       </div>
     );
   }
@@ -144,11 +144,11 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
         </div>
         <div className="text-center space-y-2">
           <h2 className="text-3xl font-bold text-white">Changelog Generated Successfully!</h2>
-          <p className="text-slate-400">Your AI-curated release notes are ready to be shared.</p>
+          <p className="text-stone-400">Your AI-curated release notes are ready to be shared.</p>
         </div>
         
-        <div className="w-full max-w-md bg-slate-900/80 border border-slate-700 p-2 rounded-xl flex items-center justify-between shadow-lg">
-          <span className="text-slate-300 truncate pl-4 text-sm font-mono">
+        <div className="w-full max-w-md bg-stone-900/80 border border-stone-700 p-2 rounded-xl flex items-center justify-between shadow-lg">
+          <span className="text-stone-300 truncate pl-4 text-sm font-mono">
              {`${typeof window !== 'undefined' ? window.location.origin : ''}/changelogs/${successSlug}`}
           </span>
           <Button 
@@ -165,7 +165,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
         <Button 
           variant="outline" 
           onClick={handleReset}
-          className="border-slate-700 text-slate-300 hover:bg-slate-800"
+          className="border-stone-700 text-stone-300 hover:bg-stone-800"
         >
           Generate Another
         </Button>
@@ -183,7 +183,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-full sm:w-[350px] justify-between bg-slate-900 border-slate-800 text-slate-200 hover:bg-slate-800 hover:text-white"
+              className="w-full sm:w-[350px] justify-between bg-stone-900 border-stone-800 text-stone-200 hover:bg-stone-800 hover:text-white"
             >
               <span className="truncate">
                 {selectedRepo ? selectedRepo.full_name : "Select repository..."}
@@ -191,9 +191,9 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-[350px] p-0 bg-slate-900 border-slate-800 text-slate-200">
-            <Command className="bg-transparent text-slate-200">
-              <CommandInput placeholder="Search repository..." className="text-slate-200 border-b border-slate-800" />
+          <PopoverContent className="w-[350px] p-0 bg-stone-900 border-stone-800 text-stone-200">
+            <Command className="bg-transparent text-stone-200">
+              <CommandInput placeholder="Search repository..." className="text-stone-200 border-b border-stone-800" />
               <CommandList>
                 <CommandEmpty>No repository found.</CommandEmpty>
                 <CommandGroup>
@@ -205,7 +205,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
                         setRepoValue(currentValue === repoValue ? "" : currentValue);
                         setOpen(false);
                       }}
-                      className="text-slate-200 hover:bg-slate-800 hover:text-white cursor-pointer data-[selected=true]:bg-slate-800 data-[selected=true]:text-white"
+                      className="text-stone-200 hover:bg-stone-800 hover:text-white cursor-pointer data-[selected=true]:bg-stone-800 data-[selected=true]:text-white"
                     >
                       <Check
                         className={cn(
@@ -228,8 +228,8 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
             <Button
               variant="outline"
               className={cn(
-                "w-full sm:w-[300px] justify-start text-left font-normal bg-slate-900 border-slate-800 text-slate-200 hover:bg-slate-800 hover:text-white",
-                !dateRange.from && "text-slate-400"
+                "w-full sm:w-[300px] justify-start text-left font-normal bg-stone-900 border-stone-800 text-stone-200 hover:bg-stone-800 hover:text-white",
+                !dateRange.from && "text-stone-400"
               )}
             >
               <CalendarIcon className="mr-2 h-4 w-4" />
@@ -247,7 +247,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
               )}
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-auto p-0 bg-slate-900 border-slate-800 text-slate-200" align="start">
+          <PopoverContent className="w-auto p-0 bg-stone-900 border-stone-800 text-stone-200" align="start">
             <Calendar
               initialFocus
               mode="range"
@@ -255,7 +255,7 @@ export default function DashboardClient({ repos }: { repos: any[] }) {
               selected={{ from: dateRange.from, to: dateRange.to }}
               onSelect={(range) => setDateRange({ from: range?.from, to: range?.to })}
               numberOfMonths={2}
-              className="bg-transparent text-slate-200"
+              className="bg-transparent text-stone-200"
             />
           </PopoverContent>
         </Popover>

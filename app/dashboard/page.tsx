@@ -34,11 +34,11 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 p-4 py-8 md:p-8 md:py-12">
+    <div className="min-h-screen bg-stone-950 text-stone-50 p-4 py-8 md:p-8 md:py-12">
       <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-slate-400 mt-2">Select a repository and date range to generate a changelog.</p>
+          <p className="text-stone-400 mt-2">Select a repository and date range to generate a changelog.</p>
         </div>
         
         <DashboardClient repos={repos} />
